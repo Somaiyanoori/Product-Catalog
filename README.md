@@ -1,16 +1,65 @@
-# React + Vite
+# Product Catalog 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A multi-page React application demonstrating **React Router v6/v7**, **Nested Routes**, and **Dynamic Routing**. This project serves as a functional product catalog where users can browse products and view specific details.
 
-Currently, two official plugins are available:
+##  Features & Requirements Met
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project fulfills all functional and technical requirements of the assignment:
 
-## React Compiler
+### 1. Routing & Navigation
+- [x] **Routes:** `/` (Home), `/products` (List), `/products/:id` (Details), and `*` (404 Not Found).
+- [x] **Navigation:** Top Navbar is visible on all pages.
+- [x] **Active State:** Uses `<NavLink>` to highlight the current active page.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 2. Nested Routes & Layouts
+- [x] **Shared Layout:** The `/products` route acts as a parent layout.
+- [x] **Outlet:** Uses `<Outlet />` to render the Product List or Product Details inside the shared layout container.
 
-## Expanding the ESLint configuration
+### 3. Dynamic Data
+- [x] **Data Source:** Uses a local array of objects (minimum 6 products).
+- [x] **Dynamic Routing:** Uses `:id` to generate unique URLs for every product.
+- [x] **Hooks Used:**
+  - `useParams()` to read the product ID from the URL.
+  - `useNavigate()` to implement the "Go Back" button functionality.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### 4. Styling
+- [x] **Bootstrap 5:** Used for a responsive grid system, professional cards, and navigation styling.
+- [x] **Responsive Images:** Product images are styled with `object-fit: cover` to maintain aspect ratio.
+
+---
+
+## Technologies Used
+
+- **React.js** (Functional Components, Hooks)
+- **React Router DOM** (Routing management)
+- **Bootstrap 5** (UI Framework via CDN)
+- **Vite** (Build tool)
+
+---
+
+##  Project Structure
+
+```text
+src/
+├── components/
+│   └── Navbar.jsx       
+├── data/
+│   └── products.js       
+├── pages/
+│   ├── Home.jsx          
+│   ├── ProductsLayout.jsx 
+│   ├── ProductList.jsx   
+│   ├── ProductDetail.jsx 
+│   └── NotFound.jsx      
+├── App.jsx               
+├── App.css               
+└── main.jsx
+```
+### How to Install and Run
+ - git clone origin https://github.com/Somaiyanoori/Product-Catalog.git
+ - cd Product-Catalog
+ - npm install
+ - npm run dev
+
+## Author
+Somaiya noori
